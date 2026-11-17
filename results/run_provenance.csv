@@ -1,0 +1,6 @@
+seed,bc_grad_steps,ft_grad_steps,posttrain_transitions,corrective_transitions,corrective_restarts,dev_failures
+0,540,210,1600,800,108,424
+1,540,210,1600,800,90,461
+2,540,210,1600,800,90,380
+3,540,210,1600,800,90,413
+4,540,210,1600,800,102,451
