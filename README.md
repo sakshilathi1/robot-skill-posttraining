@@ -121,6 +121,11 @@ Both post-training arms help, but targeting helps more. Per-seed values are in
 ![success](results/plots/01_success_overall.png)
 ![by condition](results/plots/02_success_by_condition.png)
 
+Mean final end-effector error tracks the same ordering, so the success-rate gains are not
+threshold artefacts - the post-trained policies end genuinely closer to the target:
+
+![mean error](results/plots/03_mean_error.png)
+
 ## Failure analysis
 
 The baseline failed 2088 of 5000 benchmark episodes
@@ -165,7 +170,7 @@ python scripts/run_all.py --quick  # ~1 min smoke test
 python -m pytest tests/ -q         # unit tests
 ```
 
-Every experiment constant lives in `src/config.py`. Total runtime measured on an 8-core CPU (no GPU): **1.1 min**.
+Every experiment constant lives in `src/config.py`. Total runtime measured on an 8-core CPU (no GPU): **1.0 min**.
 
 **Reproducibility is verified, not asserted.** Two independent full runs of
 `scripts/run_all.py` produce byte-identical `results/episodes.csv` and
